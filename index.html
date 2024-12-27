@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Exam 3</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <button class="codes">
+            Websayt kodlari <img src="img/Frame.svg" alt="" />
+          </button>
+          <h1>Kontaktlar</h1>
+          <button class="dark">
+            <img src="img/tun.svg" alt="" />Tun rejimi
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="left-side">
+          <h2 class="title">Kontakt yaratish</h2>
+          <div class="card">
+            <div class="card-img">
+              <img src="img/user.svg" alt="" />
+            </div>
+            <div class="card-input">
+              <form action="#">
+                <div class="inputData">
+                  <img src="img/name.svg" class="col" alt="" />
+                  <input type="text" id="name" placeholder="Ism" />
+                </div>
+                <div class="inputData">
+                  <img src="img/familiya.svg" class="col" alt="" />
+                  <input type="text" id="fam" placeholder="Familiya" />
+                </div>
+                <div class="inputData">
+                  <img src="img/phone.svg" class="col" alt="" />
+                  <input type="text" id="num" placeholder="Telefon raqam" />
+                </div>
+                <div class="inputData">
+                  <img src="img/pochta.svg" class="col" alt="" />
+                  <input type="text" id="email" placeholder="Elektron pochta" />
+                </div>
+                <div class="inputData">
+                  <img src="img/data.svg" class="col" alt="" />
+                  <input
+                    type="text"
+                    id="data"
+                    placeholder="Qo'shimcha ma`lumot"
+                  />
+                </div>
+                <div class="inputData addBtn">
+                  <i class="fa-regular fa-star"></i>
+                  <button type="submit" id="addBtn">Qo'shish</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="right-side">
+          <h2 class="title">Kontaktlar</h2>
+          <div class="block">
+            <div class="block-head">
+              <p>Xabibullayev Yaxyobek</p>
+              <img src="img/head.svg" alt="" />
+            </div>
+            <div class="search">
+              <i class="fas fa-search col"></i>
+              <input type="text" placeholder="Kontakt qidirish" />
+              <p class="all">Barchasi</p>
+            </div>
+            <div class="contacts">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

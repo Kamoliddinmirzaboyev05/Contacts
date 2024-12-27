@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit";
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+nav {
+  background-color: #f6f9fa;
+}
+nav .container {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.codes,
+.dark {
+  border-radius: 12px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid #394867;
+  padding: 4px 8px;
+}
+
+main .container {
+  padding: 50px 0;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.left-side {
+  width: 380px;
+}
+.right-side {
+  width: 750px;
+  border-radius: 20px;
+}
+.card {
+  margin-top: 30px;
+  /* border-radius: 20px; */
+  /* overflow: hidden; */
+  position: relative;
+}
+.card-img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #394867;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.card-input {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 100%;
+  background-color: #F6F9FA;
+  border-radius: 20px;
+}
+form{
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+}
+.col{
+    border-right: 2px solid #394867;
+    padding-right: 6px;
+}
+
+.inputData{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 5px;
+    border: 2px solid #394867;
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 8px 10px;
+}
+.inputData input{
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+.addBtn{
+    background-color: #394867;
+    position: relative;
+}
+.addBtn i{
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    padding-right: 10px;
+    border-right: 2px solid white;
+}
+.addBtn button{
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+}
+.block{
+    padding: 16px;
+    background-color: #f6f9fa;
+    border-radius: 20px;
+    
+}
+.block-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 30px 0;
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #394867;
+    padding: 6px 8px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.search input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 4px 8px;
+}
+.all{
+    border-left: 2px solid #394867;
+    padding-left: 10px;
+}
+.contacts{
+    overflow-y: auto;
+    height: 380px;
+}
+.contact{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.data{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+.card-data{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 18px;
+}
