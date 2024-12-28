@@ -6,9 +6,11 @@ const data = document.querySelector("#data");
 const addBtn = document.querySelector(".addBtn");
 const addButton = document.querySelector("#addButton");
 const contacts = document.querySelector(".contacts");
+const search = document.querySelector(".search");
 const darkMode = document.querySelector(".dark");
 const codes = document.querySelector(".codes");
 const body = document.querySelector("body");
+const p = document.querySelectorAll("p");
 const cardInput = document.querySelector(".card-input");
 const cardImg = document.querySelector(".card-img");
 const title = document.querySelectorAll(".title");
@@ -25,7 +27,11 @@ darkMode.addEventListener("click", () => {
       item.classList.add("white");
       item.style.color = "white";
     });
-
+    p.forEach((item)=>{
+      item.style.color = "white"
+    })
+    search.style.color = "white"
+    search.style.borderColor = "white"
     codes.style.color = "white"
     codes.style.borderColor = "white"
     darkMode.style.color = "white"
@@ -49,6 +55,11 @@ darkMode.addEventListener("click", () => {
     title.forEach((h2) => {
       h2.classList.add("black");
     });
+    p.forEach((item)=>{
+      item.style.color = "black"
+    })
+    search.style.color = "#394867"
+    search.style.borderColor = "#394867"
     codes.style.color = "#394867"
     codes.style.borderColor = "#394867"
     darkMode.style.color = "#394867"
