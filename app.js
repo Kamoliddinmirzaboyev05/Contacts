@@ -17,69 +17,7 @@ const title = document.querySelectorAll(".title");
 const block = document.querySelector(".block");
 const inputs = document.querySelectorAll("input");
 const nav = document.querySelector("nav");
-var db = [];
 
-var dark = 0;
-darkMode.addEventListener("click", () => {
-  if (dark == 0) {
-    dark = 1;
-    inputs.forEach((item) => {
-      item.classList.add("white");
-      item.style.color = "white";
-    });
-    p.forEach((item)=>{
-      item.style.color = "white"
-    })
-    search.style.color = "white"
-    search.style.borderColor = "white"
-    codes.style.color = "white"
-    codes.style.borderColor = "white"
-    darkMode.style.color = "white"
-    darkMode.style.borderColor = "white"
-    body.style.backgroundColor = "#212A3E";
-    addBtn.style.backgroundColor = "#fff";
-    addButton.style.color = "#394867";
-    nav.style.backgroundColor = "#263148";
-    cardInput.style.backgroundColor = "#2E3A54";
-    cardImg.style.backgroundColor = "#263148";
-    block.style.backgroundColor = "#263148";
-    title.forEach((item) => {
-      item.style.color = "white";
-      item.classList.remove("black");
-    });
-    darkMode.innerHTML = `
-    <img src="img/sun.svg" alt="">
-  Kunduz rejimi
-  `;
-  } else if (dark == 1) {
-    title.forEach((h2) => {
-      h2.classList.add("black");
-    });
-    p.forEach((item)=>{
-      item.style.color = "black"
-    })
-    search.style.color = "#394867"
-    search.style.borderColor = "#394867"
-    codes.style.color = "#394867"
-    codes.style.borderColor = "#394867"
-    darkMode.style.color = "#394867"
-    darkMode.style.borderColor = "#394867"
-    addBtn.style.backgroundColor = "#394867"
-    addButton.style.color = "white";
-    body.style.backgroundColor = "white";
-    nav.style.backgroundColor = "#F6F9FA";
-    cardInput.style.backgroundColor = "#F6F9FA";
-    cardImg.style.backgroundColor = "#394867";
-    block.style.backgroundColor = "#F6F9FA";
-    darkMode.innerHTML = `
-  <img src="img/tun.svg" alt="" />Tun rejimi
-  `;
-    dark = 0;
-  }
-  title.forEach((item) => {
-    item.style.color = "white";
-  });
-});
 var writeContact = () => {
   contacts.innerHTML = "";
   db.forEach((item) => {
@@ -101,6 +39,75 @@ var writeContact = () => {
                             `;
   });
 };
+
+var db = JSON.parse(localStorage.getItem("db"))
+  ? JSON.parse(localStorage.getItem("db"))
+  : [];
+writeContact();
+var dark = 0;
+darkMode.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (dark == 0) {
+    dark = 1;
+    inputs.forEach((item) => {
+      item.classList.add("white");
+      item.style.color = "white";
+    });
+    p.forEach((item) => {
+      item.style.color = "white";
+    });
+    search.style.color = "white";
+    search.style.borderColor = "white";
+    codes.style.color = "white";
+    codes.style.borderColor = "white";
+    darkMode.style.color = "white";
+    darkMode.style.borderColor = "white";
+    body.style.backgroundColor = "#212A3E";
+    addBtn.style.backgroundColor = "#fff";
+    addButton.style.color = "#394867";
+    nav.style.backgroundColor = "#263148";
+    cardInput.style.backgroundColor = "#2E3A54";
+    cardImg.style.backgroundColor = "#263148";
+    block.style.backgroundColor = "#263148";
+    title.forEach((item) => {
+      item.style.color = "white";
+      item.classList.remove("black");
+    });
+    darkMode.innerHTML = `
+    <img src="img/sun.svg" alt="">
+  Kunduz rejimi
+  `;
+  } else if (dark == 1) {
+    title.forEach((h2) => {
+      h2.classList.add("black");
+    });
+    p.forEach((item) => {
+      item.style.color = "black";
+    });
+    search.style.color = "#394867";
+    search.style.borderColor = "#394867";
+    codes.style.color = "#394867";
+    codes.style.borderColor = "#394867";
+    darkMode.style.color = "#394867";
+    darkMode.style.borderColor = "#394867";
+    addBtn.style.backgroundColor = "#394867";
+    addButton.style.color = "white";
+    body.style.backgroundColor = "white";
+    nav.style.backgroundColor = "#F6F9FA";
+    cardInput.style.backgroundColor = "#F6F9FA";
+    cardImg.style.backgroundColor = "#394867";
+    block.style.backgroundColor = "#F6F9FA";
+    darkMode.innerHTML = `
+  <img src="img/tun.svg" alt="" />Tun rejimi
+  `;
+    dark = 0;
+  }
+  title.forEach((item) => {
+    item.style.color = "white";
+  });
+});
+
+writeContact();
 var stared = document.querySelector(".star");
 addBtn.addEventListener("click", () => {
   if (
@@ -128,6 +135,7 @@ addBtn.addEventListener("click", () => {
     email.value = "";
     data.value = "";
     db.push(contact);
+    localStorage.setItem("db", JSON.stringify(db));
     writeContact();
   }
 });
@@ -137,5 +145,16 @@ var removeContact = (id) => {
     return id != item.id;
   });
   db = newDB;
+  localStorage.setItem("db", JSON.stringify(db))
   writeContact();
 };
+
+var arr = [1, 2, 3, 4, 5];
+
+localStorage.setItem("arr", JSON.stringify(arr));
+
+var newarr = JSON.parse(localStorage.getItem("arr"));
+
+newarr.forEach((item) => {
+  console.log(item);
+});
